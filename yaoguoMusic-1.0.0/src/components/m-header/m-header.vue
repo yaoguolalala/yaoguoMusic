@@ -1,0 +1,52 @@
+<!-- 头部组件 -->
+<template>
+  <div class="m-header">
+      <div class="icon"></div>
+      <h1 class="text">yaoguo Music</h1>
+  </div>
+</template>
+
+<script type='text/ecmacscript-6'>
+export default {
+  data () {
+    return {
+    };
+  },
+
+}
+
+</script>
+<style lang='stylus' scoped rel='stylesheet/stylus'>
+    @import "../../common/stylus/variable.styl"
+    @import "../../common/stylus/mixin.styl"
+
+    .m-header
+        position: relative
+        height: 44px
+        text-align: center
+        color: $color-theme
+        font-size: 0
+        .icon
+            display: inline-block
+            vertical-align: top
+            margin-top: 6px
+            width: 30px
+            height: 32px
+            margin-right: 9px
+            bg-image('./imgs/logo')
+            background-size: 30px 32px
+        .text
+            display: inline-block
+            vertical-align: top
+            line-height: 44px
+            font-size: $font-size-large
+        .mine
+            position: absolute
+            top: 0
+            right: 0
+            .icon-mine
+                display: block
+                padding: 12px
+                font-size: 20px
+                color: $color-theme
+</style>
