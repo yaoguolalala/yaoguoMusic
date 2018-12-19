@@ -29,6 +29,10 @@ export default {
     pullup:{
       type:Boolean,
       defaultL: false
+    },
+    beforeScroll:{
+      type: Boolean,
+      default: false
     }
   },
   mounted(){

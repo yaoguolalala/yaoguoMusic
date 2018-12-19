@@ -92,6 +92,7 @@
       </div>
     </div>
     </transition>
+    
     <audio ref="audio"  
         :src="currentSong.url" 
         @canplay="ready" 
@@ -110,6 +111,7 @@ import {shuffle} from '../../common/js/util.js'
 import {getLyric} from '../../common/js/song.js'
 import Lyric from 'lyric-parser'
 import Scroll from '../../base/scroll/scroll'
+//import Playlist from '../playlist/playlist'
 //import {getSongLyric} from '../../api/song.js'
 
 const transform = prefixStyle('transform')
@@ -129,6 +131,7 @@ export default {
   components:{
     ProgressBar,
     Scroll
+    //Playlist
   },
   computed: {
     playIcon(){
