@@ -7,6 +7,7 @@ import Search from '../components/search/search'
 import SingerDetail from '../components/singer-detail/singer-detail.vue'
 import Disc from '../components/disc/disc.vue'
 import TopList from '../components/top-list/top-list'
+import UserCenter from '../components/user-center/user-center'
 
 Vue.use(Router)
 
@@ -49,6 +50,10 @@ export default new Router({
         {
             path:'/',
             redirect: '/recommend'
+        },
+        {
+            path:'/user',
+            component:UserCenter
         }    
     ]
 })

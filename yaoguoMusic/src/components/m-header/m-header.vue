@@ -3,6 +3,9 @@
   <div class="m-header">
       <div class="icon"></div>
       <h1 class="text">yaoguo Music</h1>
+      <router-link to="/user" class="mine">
+        <i class="icon-mine"></i>
+      </router-link>
   </div>
 </template>
 
@@ -43,7 +46,7 @@ export default {
         .mine
             position: absolute
             top: 0
-            right: 0
+            right: 8px
             .icon-mine
                 display: block
                 padding: 12px

@@ -44,12 +44,12 @@ import {ERR_OK} from '../../api/config'
 import Suggest from '../suggest/suggest'
 import SearchList from '../../base/search-list/search-list'
 import Confirm from '../../base/confirm/confirm'
-import {mapActions, mapGetters} from 'vuex'
+import {mapActions} from 'vuex'
 import Scroll from '../../base/scroll/scroll'
-import {playlistMixin} from '../../common/js/mixin'
+import {playlistMixin,searchMixin} from '../../common/js/mixin'
 
 export default {
-  mixins: [playlistMixin],
+  mixins: [playlistMixin,searchMixin],
   components:{
     SearchBox,
     Suggest,
@@ -59,17 +59,19 @@ export default {
   },
   data () {
     return {
-      hotKey:[],
-      query:''
+      hotKey:[]
+      //query:''
     };
   },
   computed:{
     shortcut(){
       return this.hotKey.concat(this.saveSearchHistory)
     },
+    /*
     ...mapGetters([
       'searchHistory'
     ])
+    */
   },
 
   created(){
@@ -91,24 +93,32 @@ export default {
        }
       })
     },
+    /*
     addQuery(query){
 
       this.$refs.searchBox.setQuery(query)
     },
+    */
+    /*
     onQueryChange(query){
       this.query = query
     },
+    */
+    /*
     saveSearch(){
       this.saveSearchHistory(this.query)
     },
+    */
     showConfirm(){
       this.$refs.confirm.show()
     },
+    
     ...mapActions([
-      'saveSearchHistory',
-      'deleteSearchHistory',
+      //'saveSearchHistory',
+      //'deleteSearchHistory',
       'clearSearchHistory'
     ])
+    
   },
   watch:{
     query(newQuery){

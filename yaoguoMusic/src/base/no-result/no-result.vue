@@ -30,6 +30,6 @@
       background-size: 86px 90px
     .no-result-text
       margin-top: 30px
-      font-size: $font-size-medium
+      font-size: $font-size-small
       color: $color-text-d
 </style>
